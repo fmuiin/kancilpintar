@@ -1,0 +1,17 @@
+{
+  "name": "Kancil Pintar",
+  "short_name": "Kancil",
+  "description": "Game belajar huruf dan berhitung untuk anak, bersama Kancil.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#CFEBF4",
+  "theme_color": "#CFEBF4",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

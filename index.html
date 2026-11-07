@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kancil Pintar</title>
+<meta name="description" content="Game belajar huruf dan berhitung untuk anak, bersama Kancil.">
+<meta name="theme-color" content="#CFEBF4">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kancil Pintar">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <section id="namescr" class="screen">
+    <div class="hero">
+      <div class="kav" id="nameKancil"></div>
+      <h1>Siapa namamu?</h1>
+      <p>Orang tua boleh mengetikkan nama anak di sini.</p>
+    </div>
+    <form class="namebox" id="nameForm">
+      <input id="nameInput" type="text" maxlength="20" autocomplete="off" placeholder="Nama anak" aria-label="Nama anak">
+      <button class="btn leaf" type="submit">Mulai</button>
+      <button class="link" id="nameSkip" type="button">Lewati dulu</button>
+    </form>
+  </section>
+
+  <section id="home" class="screen">
+    <div class="bar">
+      <button class="rbtn" id="soundBtn" type="button" aria-label="Suara"></button>
+      <div class="pill" aria-label="Jumlah bintang"><span id="starIco"></span><span id="starCount">0</span></div>
+    </div>
+    <div class="hero">
+      <div class="kav" id="heroKancil"></div>
+      <h1>Kancil Pintar</h1>
+      <p id="heroSub">Ayo belajar huruf dan angka!</p>
+      <button class="link" id="renameBtn" type="button">Ganti nama</button>
+    </div>
+    <div class="menu">
+      <button class="entry g" id="goAdv" type="button"><span class="ico">🥒</span><span><b>Petualangan Kancil</b><small>Cari timun bersama Kancil</small></span></button>
+      <button class="entry y" id="goTg" type="button"><span class="ico">🖼️</span><span><b>Tebak Gambar</b><small>Huruf dan angka</small></span></button>
+      <button class="entry r" id="goMem" type="button"><span class="ico">🃏</span><span><b>Cari Pasangan</b><small>Cocokkan kartunya</small></span></button>
+    </div>
+  </section>
+
+  <section id="adv" class="screen">
+    <div class="bar">
+      <button class="rbtn" data-home type="button" aria-label="Kembali ke rumah"></button>
+      <div class="title">Petualangan Kancil</div>
+      <button class="rbtn replay" type="button" aria-label="Dengarkan lagi"></button>
+    </div>
+    <div class="trail" id="trail"></div>
+    <div class="scene" id="advScene" data-deco="🌳">
+      <div class="chip" id="advChip">Hutan</div>
+      <div class="quiz" id="advQuiz"></div>
+    </div>
+  </section>
+
+  <section id="tg" class="screen">
+    <div class="bar">
+      <button class="rbtn" data-home type="button" aria-label="Kembali ke rumah"></button>
+      <div class="dots" id="tgDots"></div>
+      <button class="rbtn replay" type="button" aria-label="Dengarkan lagi"></button>
+    </div>
+    <div class="scene" id="tgScene" style="--scene:#FFF0BF" data-deco="⭐">
+      <div class="quiz" id="tgQuiz"></div>
+    </div>
+  </section>
+
+  <section id="mem" class="screen">
+    <div class="bar">
+      <button class="rbtn" data-home type="button" aria-label="Kembali ke rumah"></button>
+      <div class="title" id="memTitle">Cari Pasangan</div>
+      <button class="rbtn replay" type="button" aria-label="Dengarkan lagi"></button>
+    </div>
+    <div class="speaker small" id="memSpeaker"></div>
+    <div class="mgrid" id="mgrid"></div>
+  </section>
+
+</div>
+
+<div id="ov" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+  <div class="ov-card">
+    <div class="kav" id="ovKancil"></div>
+    <h2 id="ovTitle"></h2>
+    <div class="items ov-items" id="ovItems" hidden></div>
+    <p id="ovSub"></p>
+    <div class="ov-stars" id="ovStars"></div>
+    <div class="ov-actions">
+      <button class="btn sun" id="ovAgain" type="button">Main lagi</button>
+      <button class="btn ghost" id="ovHome" type="button">Kembali ke rumah</button>
+    </div>
+  </div>
+</div>
+
+<noscript>Game ini membutuhkan JavaScript. Mohon aktifkan JavaScript di peramban.</noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
